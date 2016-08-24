@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReceiptsTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,15 @@ class CreateReceiptsTable extends Migration
      */
     public function up()
     {
-        Schema::create('receipts', function (Blueprint $table) {
-            $table->integer('product_id');
+        Schema::create('products', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->index();
             $table->string('item');
             $table->string('varietySeed');
             $table->date('harvestedDate');
-            $table->date('ReceivedDate');
-            $table->string('ReceivedFrom');
-            $table->string('LotNo');
+            $table->date('receivedDate');
+            $table->string('receivedFrom');
+            $table->string('lotNo');
             $table->string('certification');
             $table->timestamps();
         });
@@ -32,6 +33,6 @@ class CreateReceiptsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('receipts');
+        Schema::drop('products');
     }
 }

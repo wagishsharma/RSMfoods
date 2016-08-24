@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Task;
+use App\Product;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -32,4 +33,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Task::class);
     }
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+     
 }
