@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
-use App\Test;
+use App\Testgi;
 use App\User;
 class TestPolicy
 {
