@@ -5,18 +5,18 @@
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    New Task
+                    New Test
                 </div>
 
                 <div class="panel-body">
                     <!-- Display Validation Errors -->
                     @include('common.errors')
 
-                    <!-- New Task Form -->
+                    <!-- New Test Form -->
                     <form action="{{ url('test') }}" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
 
-                        <!-- Task Name -->
+                        <!-- Test Name -->
 
                         <div class="form-group">
                             <label for="test-name" class="col-sm-3 control-label">Test Name</label>
@@ -26,11 +26,11 @@
                             </div>
                         </div>
 
-                        <!-- Add Task Button -->
+                        <!-- Add Test Button -->
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <button type="submit" class="btn btn-default">
-                                    <i class="fa fa-btn fa-plus"></i>Add Task
+                                    <i class="fa fa-btn fa-plus"></i>Add Test
                                 </button>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <!-- Current Tasks -->
+            <!-- Current Tests -->
             @if (count($tests) > 0)
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -56,7 +56,7 @@
                                     <tr>
                                         <td class="table-text"><div>{{ $test->name }}</div></td>
 
-                                        <!-- Task Delete Button -->
+                                        <!-- Test Delete Button -->
                                         <td>
                                             <form action="{{url('test/' . $test->id)}}" method="POST">
                                                 {{ csrf_field() }}

@@ -21,4 +21,9 @@ class Product extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function tests()
+    {
+        return $this->belongsToMany(Test::class)
+        ->withPivot('method','wherePrescribed','whereTested','currentTestOn','value');
+    }
 }

@@ -61,7 +61,7 @@ class TestController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255', ]);
             //dd($request->all());
-       Test::create([
+       $request->user()->tests()->create([
             'name' => $request->name,
         ]);
         //DD($request->all());

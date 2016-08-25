@@ -5,18 +5,18 @@
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    New Task
+                    New Product
                 </div>
 
                 <div class="panel-body">
                     <!-- Display Validation Errors -->
                     @include('common.errors')
 
-                    <!-- New Task Form -->
+                    <!-- New Product Form -->
                     <form action="{{ url('product') }}" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
 
-                        <!-- Task Name -->
+                        <!-- Product Name -->
                         <div class="form-group">
                             <label for="product-item" class="col-sm-3 control-label">Item</label>
 
@@ -71,11 +71,11 @@
 
 
 
-                        <!-- Add Task Button -->
+                        <!-- Add Product Button -->
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <button type="submit" class="btn btn-default">
-                                    <i class="fa fa-btn fa-plus"></i>Add Task
+                                    <i class="fa fa-btn fa-plus"></i>Add Product
                                 </button>
                             </div>
                         </div>
@@ -83,37 +83,52 @@
                 </div>
             </div>
 <!--{{count($products)}}-->
-            <!-- Current Tasks -->
+            <!-- Current Products -->
             @if (count($products) > 0)
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Current Tasks
+                        Current Products
                     </div>
 
                     <div class="panel-body">
-                        <table class="table table-striped task-table">
+                        <table class="table table-striped Product-table">
                             <thead>
-                                <th>Task</th>
+                                <th>Item</th>
+                                <th>Variety/Seed</th>
+                                <th>when Harvested</th>
+                                <th>Received Factory on(Date)</th>
+                                <th>Received from(farm/Organization)</th>
+                                <th>Lot No.</th>
+                                <th>Certification of Farm/Raw Material(third party),if any</th>
                                 <th>&nbsp;</th>
                             </thead>
                             <tbody>
                                 @foreach ($products as $product)
                                     <tr>
-                                        <td class="table-text"><div>{{ $product->item }}</div></td>
-
-                                        <!-- Task Delete Button -->
+                                        <td class="table-text"><div><a href="{{ url('product/create/'.$product->id) }}">{{ $product->item }}</a></div></td> 
+                                        <td class="table-text"><div>{{ $product->varietySeed }}</div></td>
+                                        <td class="table-date"><div>{{ $product->harvestedDate }}</div></td>
+                                        <td class="table-date"><div>{{ $product->receivedDate}}</div></td>
+                                        <td class="table-text"><div>{{ $product->receivedFrom }}</div></td>
+                                        <td class="table-text"><div>{{ $product->lotNo }}</div></td>
+                                        <td class="table-text"><div>{{ $product->certification}}</div></td>
+                                       
+                                        
+                                        
+                                        <!-- Product Delete Button -->
                                         <td>
                                             <form action="{{url('product/' . $product->id)}}" method="POST">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
 
-                                                <button type="submit" id="delete-product-{{ $product->product_id }}" class="btn btn-danger">
+                                                <button type="submit" id="delete-product-{{ $product->id }}" class="btn btn-danger">
                                                     <i class="fa fa-btn fa-trash"></i>Delete
                                                 </button>
                                             </form>
                                         </td>
                                     </tr>
+
                                 @endforeach
                             </tbody>
                         </table>
