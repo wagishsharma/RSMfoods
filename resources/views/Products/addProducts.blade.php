@@ -5,7 +5,7 @@
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    New Product
+                    Reeceipt Raw Material
                 </div>
 
                 <div class="panel-body">
@@ -84,57 +84,7 @@
             </div>
 <!--{{count($products)}}-->
             <!-- Current Products -->
-            @if (count($products) > 0)
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Current Products
-                    </div>
-
-                    <div class="panel-body">
-                        <table class="table table-striped Product-table">
-                            <thead>
-                                <th>Item</th>
-                                <th>Variety/Seed</th>
-                                <th>when Harvested</th>
-                                <th>Received Factory on(Date)</th>
-                                <th>Received from(farm/Organization)</th>
-                                <th>Lot No.</th>
-                                <th>Certification of Farm/Raw Material(third party),if any</th>
-                                <th>&nbsp;</th>
-                            </thead>
-                            <tbody>
-                                @foreach ($products as $product)
-                                    <tr>
-                                        <td class="table-text"><div><a href="{{ url('product/create/'.$product->id) }}">{{ $product->item }}</a></div></td> 
-                                        <td class="table-text"><div>{{ $product->varietySeed }}</div></td>
-                                        <td class="table-date"><div>{{ $product->harvestedDate }}</div></td>
-                                        <td class="table-date"><div>{{ $product->receivedDate}}</div></td>
-                                        <td class="table-text"><div>{{ $product->receivedFrom }}</div></td>
-                                        <td class="table-text"><div>{{ $product->lotNo }}</div></td>
-                                        <td class="table-text"><div>{{ $product->certification}}</div></td>
-                                       
-                                        
-                                        
-                                        <!-- Product Delete Button -->
-                                        <td>
-                                            <form action="{{url('product/' . $product->id)}}" method="POST">
-                                                {{ csrf_field() }}
-                                                {{ method_field('DELETE') }}
-
-                                                <button type="submit" id="delete-product-{{ $product->id }}" class="btn btn-danger">
-                                                    <i class="fa fa-btn fa-trash"></i>Delete
-                                                </button>
-                                            </form>
-                                        </td>
-                                    </tr>
-
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            @endif
+            
         </div>
     </div>
 @endsection

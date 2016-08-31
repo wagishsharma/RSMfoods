@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User;
-
+use App\Processing;
 class Product extends Model
 {
     protected $fillable = ['item','varietySeed','harvestedDate','receivedDate','receivedFrom',
@@ -26,4 +26,9 @@ class Product extends Model
         return $this->belongsToMany(Test::class)
         ->withPivot('method','wherePrescribed','whereTested','currentTestOn','value');
     }
+    public function processing()
+    {
+        return $this->hasOne(Processing::class);
+    }
+
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel Quickstart - Intermediate</title>
+    <title>RSM Foods</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -39,9 +39,19 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Admin
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    Admin Panel 
                 </a>
+                <a class="navbar-brand" href="{{ url('/product') }}">
+                    Product  
+                </a>
+                <a class="navbar-brand" href="{{ url('/test') }}">
+                    Test
+                </a>
+                <a class="navbar-brand" href="{{ url('/showproducts') }}">
+                    ShowAllProducts
+                </a>
+
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">

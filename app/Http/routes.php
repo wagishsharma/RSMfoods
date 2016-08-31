@@ -33,6 +33,17 @@ Route::group(['middleware' => ['web']], function () {
     Route::delete('/task/{task}', 'TaskController@destroy');
     Route::resource('product', 'ProductController');
     Route::resource('test', 'TestController');
+    //Route::resource('productTest', 'ProductTestController');
+    Route::get('products/{id}/tests/create/','ProductController@addTest');
+    Route::post('product/{id}/test','ProductController@storeTest');
+    Route::get('/testingForm', function () {
+        return view('products.testingForm');
+    });
+    Route::delete('product/{product_id}/test/{test_id}','ProductController@destroyTest');
+    Route::get('/showproducts','ProductController@showAll');
+    Route::post('product/{id}/processing','ProductController@storeProcessing');
+    Route::get('product/show/{id}','ProductController@show');
+    Route::get('/home','ProductController@showQR');
     Route::auth();
 
 });
