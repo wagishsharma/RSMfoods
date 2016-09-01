@@ -48,7 +48,7 @@ function printQRCode($url, $size = 100) {
 
                                 <!-- product URL-->
                                 <td class="table-text">
-                                    <div>{{$url}}</div>
+                                <a href="{{$url}}" class="btn btn-primary btn-lg " role="button" >{{$url}}</a>
                                 </td>
                                 <!-- Delete Button -->
                                 <td>
