@@ -29,7 +29,7 @@ class ProductController extends Controller
         //
          //$this->products=Product::all();
      
-         return view('products.addProducts', [
+         return view('Products.addProducts', [
             'products' => $this->products,
             //forUser($request->user()),
         ]);
@@ -77,13 +77,13 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        return view('products.productQR',compact('product')); 
+        return view('Products.productQR',compact('product')); 
 
         
     }
      public function showAll()
     {
-        return view('products.showProducts', [
+        return view('Products.showProducts', [
             'products' => $this->products,
             //forUser($request->user()),
         ]);
@@ -135,7 +135,7 @@ class ProductController extends Controller
         $tests =Test::lists('name','id');
         
         //dd($processings->started);
-        return view('products.addTestProducts',compact('product','tests','processing')); 
+        return view('Products.addTestProducts',compact('product','tests','processing')); 
 
     }
     public function storeProcessing(Request $request,$id)
