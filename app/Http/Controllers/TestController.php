@@ -33,7 +33,7 @@ class TestController extends Controller
     {
         //
         //$this->test=Test::all();
-        return view('products.addTests', [
+        return view('Products.addTests', [
             'tests' =>$this->tests,
             //forUser($request->user()),
         ]);
