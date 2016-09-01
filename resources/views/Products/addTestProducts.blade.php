@@ -87,7 +87,7 @@
                         Details of test reports for the raw material 
                     </div>
 
-                    <div class="panel-body">
+                    <div class="table-responsive">
                         <table class="table table-striped Product-table">
                             <thead>
                                 <th>name</th>
@@ -231,7 +231,7 @@
                         Processing 
                     </div>
 
-                    <div class="panel-body">
+                    <div class="table-responsive">
                         <table class="table table-striped Product-table">
                             <thead>
                                 <th>Processing/Packaging started</th>

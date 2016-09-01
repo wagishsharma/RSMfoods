@@ -12,7 +12,8 @@
                         Current Products       (Click on product Name to add tests related to product)
                     </div>
 
-                    <div class="panel-body">
+                    <div class="table-responsive">
+
                         <table class="table table-striped Product-table">
                             <thead>
                                 <th>Item</th>
