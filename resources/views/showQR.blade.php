@@ -17,14 +17,14 @@ function printQRCode($url, $size = 100) {
                 Products
             </div>
 
-            <div class="panel-body">
+            <div class="table-responsive">
                 <table class="table table-striped task-table">
 
                     <!-- Table Headings -->
                     <thead>
                         <th>Product Name</th>
-                        <th>URL</th>
                         <th>QR Code</th>
+                        <th>URL</th>
                         <th>&nbsp;</th>
                     </thead>
 
@@ -33,18 +33,23 @@ function printQRCode($url, $size = 100) {
                         @foreach ($products as $product)
                             <tr>
                                 <!-- product Name -->
-                                  <td class="table-text">
+                                <td class="table-text">
                                     <div>{{ $product->item }}</div>
                                 </td>
-                                <!-- product URL-->
-                                 <td class="table-text">
-                                    <div>{{$url = url('product/show/'.$product->id )}}</div>
-                                </td>
-
+                                
+                                <!-- product QR-->
+                                
                                 <td  class="img-fluid" alt="Responsive image">
-                                    <div><?php echo printQRCode($url); ?></div>
+                                    <div><?php $url = url('product/show/'.$product->id );
+                                    echo printQRCode($url); 
+
+                                    ?></div>
                                 </td>
 
+                                <!-- product URL-->
+                                <td class="table-text">
+                                    <div>{{$url}}</div>
+                                </td>
                                 <!-- Delete Button -->
                                 <td>
                                     <form action="{{ url('product/'.$product->id) }}" method="POST">
