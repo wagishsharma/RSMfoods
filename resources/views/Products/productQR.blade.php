@@ -102,7 +102,7 @@
                                 <th>Barcode No</th>
                                 <th>Dispatched to</th>
                                 <th>Dispatched On</th>  
-                                <th>Remarks</th>
+                               
                                 
                             </thead>
                             <tbody>
@@ -115,7 +115,7 @@
                                         <td class="table-date"><div>{{ $product->processing->barCodeNo}}</div></td>
                                         <td class="table-date"><div>{{ $product->processing->dispatchedTo}}</div></td>
                                         <td class="table-text"><div>{{ $product->processing->dispatchedOn }}</div></td>
-                                        <td class="table-text"><div>{{ $product->processing->remarks}}</div></td>
+                                        
                                         
                                         
                                         
@@ -126,6 +126,13 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                       Remarks 
+                    </div>
+                  <div class="panel-body">{{ $product->processing->remarks}}</div>
+
                 </div>
             @endif
 
