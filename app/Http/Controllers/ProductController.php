@@ -124,7 +124,7 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return redirect('/product');
+        return back();
     }
 
     public function addTest($id)
