@@ -152,15 +152,16 @@
                             <label for="Processing-name" class="col-sm-3 control-label">Processing/Packaging started</label>
 
                             <div class="col-sm-6">
+                                {{ Form::text('started', null, array('class' => 'form-control datepicker','placeholder' => ' YYYY-mm-dd','id1' => 'datepicker')) }}
                                 
-                                <input type="date" name="started" id="Processing-method" class="form-control" value="{{ old('receipt') }}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="Processing-method" class="col-sm-3 control-label">Processing/Packaging completed</label>
 
                             <div class="col-sm-6">
-                                <input type="date" name="completed" id="Processing-method" class="form-control" value="{{ old('receipt') }}">
+                                {{ Form::text('completed', null, array('class' => 'form-control datepicker','placeholder' => ' YYYY-mm-dd','id2' => 'datepicker')) }}
+                                
                             </div>
                         </div>
                         <div class="form-group">
@@ -197,7 +198,8 @@
                             <label for="Processing-dispatchedOn" class="col-sm-3 control-label">Dispatched On </label>
 
                             <div class="col-sm-6">
-                                <input type="date" name="dispatchedOn" id="Processing-dispatchedOn" class="form-control" value="{{ old('receipt') }}">
+                                {{ Form::text('dispatchedOn', null, array('class' => 'form-control datepicker','placeholder' => ' YYYY-mm-dd','id3' => 'datepicker')) }}
+                                
                             </div>
                         </div>
                         <div class="form-group">

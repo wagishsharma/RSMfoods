@@ -35,15 +35,19 @@
                             <label for="product-harvestedDate" class="col-sm-3 control-label">When Harvested</label>
 
                             <div class="col-sm-6">
-                                <input type="date" name="harvestedDate" id="product-harvestedDate" class="form-control" value="{{ old('receipt') }}">
+                               
+                                
+                                 {{ Form::text('harvestedDate', null, array('class' => 'form-control datepicker','placeholder' => 'harvested Date','id1' => 'datepicker')) }}
                             </div>
+
 
                         </div>
                         <div class="form-group">
                             <label for="product-harvestedSeed" class="col-sm-3 control-label">Received Factory on</label>
 
                             <div class="col-sm-6">
-                                <input type="date" name="receivedDate" id="product-harvestedSeed" class="form-control" value="{{ old('receipt') }}">
+                                {{ Form::text('receivedDate', null, array('class' => 'form-control datepicker','placeholder' => 'received Date','id2' => 'datepicker')) }}
+                                
                             </div>
 
                         </div>

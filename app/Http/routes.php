@@ -40,7 +40,7 @@ Route::group(['middleware' => ['web']], function () {
         return view('products.testingForm');
     });
     Route::delete('product/{product_id}/test/{test_id}','ProductController@destroyTest');
-    Route::get('/showproducts','ProductController@showAll');
+    Route::get('/products','ProductController@showAll');
     Route::post('product/{id}/processing','ProductController@storeProcessing');
     Route::get('product/show/{id}','ProductController@show');
     Route::get('/home','ProductController@showQR');

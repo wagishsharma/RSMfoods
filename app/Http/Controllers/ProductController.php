@@ -55,10 +55,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //  dd($request->all());
             $this->validate($request, [
             'item' => 'required|max:255','varietySeed'=>'required|max:255', ]);
-            //dd($request->all());
+            
          
      $product =  $request->user()->products()->create([
             'item' => $request->item,'varietySeed'=>$request->varietySeed,'harvestedDate' => $request->harvestedDate,'receivedDate' => $request->receivedDate,'receivedFrom' => $request->receivedFrom,'lotNo' => $request->lotNo,'certification' => $request->certification,
