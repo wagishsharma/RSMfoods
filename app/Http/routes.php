@@ -24,13 +24,28 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/', function () {
+    
+    //routes for static website
+
+    Route::get('/', function() {
+        return view('home');
+    });
+    Route::get('/about', function() {
+        return view('about');
+    });
+    Route::get('/whatwestandfor', function() {
+        return view('whatWeStandFor');
+    });
+
+
+    //routes for admin section
+
+    Route::get('/admin', function () {
         return view('welcome');
     })->middleware('guest');
 
-    Route::get('/tasks', 'TaskController@index');
-    Route::post('/task', 'TaskController@store');
-    Route::delete('/task/{task}', 'TaskController@destroy');
+    
+
     Route::resource('product', 'ProductController');
     Route::resource('test', 'TestController');
     //Route::resource('productTest', 'ProductTestController');

@@ -1,0 +1,16 @@
+<?php
+//This file contains the database access information. It will included on every file requiring database access.
+if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8080')
+{
+	//For localhost checking
+	//$dbc = @mysqli_connect('localhost','root','','oblo') OR die ('could not connect:' . mysqli_connect_error());
+	$dbc = @mysqli_connect('localhost','root','','practice') OR die ('could not connect:' . mysqli_connect_error());
+	
+	//echo "hi";
+}
+else
+{
+	//For online site
+	$dbc = @mysqli_connect('localhost','asiaweb1_oblo','asiaweb1_oblo','asiaweb1_oblo') OR die ('could not connect:');
+}
+?>

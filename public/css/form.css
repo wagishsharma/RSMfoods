@@ -1,0 +1,76 @@
+
+
+.formm .inp{
+    width: 300px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+.form{}
+.form-row{border:1px solid #ddd; border-radius:10px; padding:0 10px; background:#fff; padding:5px 0; margin:8px 0 16px 0;}
+.form-row h1{ padding:3px 0 8px 15px; border-bottom:1px solid #eee; margin-bottom:5px; font-size:16px; color:#666666;}
+.form-row p{margin:0px; padding: 4px 0px;}
+.form-row label{display:inline-block; font-size:12px; width:30%; text-align:right; padding-right:10px; color:#777;}
+.form-row input[type="text"]{width:200px;}
+.form-row input[type="password"]{width:200px;}
+.form-row select{width:200px;}
+.form-row input[type="file"]{width:200px;}
+.form-row textarea{width:200px; margin-left:4px;}
+
+.login-container{border:1px solid #ccc; padding:15px; border-top:4px solid #0486ED;}
+.login-container .login{background:url(../images/separator2.png) no-repeat top right; min-height:236px; padding-right:60px;}
+.login-container .login input[type="text"]{ width:240px;}
+.login-container .login input[type="password"]{ width:240px;}
+.login-container .register-btn{display:block; width:300px; font-size:18px; padding: 7px 30px; border-radius:3px; border:1px solid #082943; background:linear-gradient(to top, #015AA6 0%, #0486ED 100%); color:#fff; text-align:center; margin-left:13px; margin-top:15px;}
+.login-container .register-btn:hover{background:linear-gradient(to bottom, #015AA6 0%, #0486ED 100%);}
+
+.register{}
+.register h1{font-family: 'ralewaysemibold'; margin-top:10px;}
+.register input[type="text"]{width:240px;}
+.register input[type="password"]{width:240px;}
+.register select{width:240px;}
+.register textarea{width:240px;}
+
+.login-register{}
+.login-register h4{ padding:10px 0;}
+.login-register .login{ text-align:center;}
+.login-register .login input[type="text"]{width:80%;}
+.login-register .login input[type="password"]{width:80%;}
+.login-register .login input[type="submit"]{width:80%; font-size:18px; padding: 7px 30px;}
+.login-register .register{background:url(../images/separator.png) no-repeat 0 0; padding-left:60px;}
+.login-register .login .fb-login-btn{}
+.login-register .login .twitter-login-btn{}
+a.register{display:block; width:300px; font-size:18px; padding: 7px 30px; border-radius:3px; border:1px solid #082943; background:linear-gradient(to top, #015AA6 0%, #0486ED 100%); color:#fff; text-align:center;}
+a.register:hover{background:linear-gradient(to bottom, #015AA6 0%, #0486ED 100%); color:#fff;}
+
+.print{background:#fff; padding:0px;}
+.print .print-heading{background:#0486ED; color:#fff; font-size:16px; padding:5px 10px}
+.print .print-content{padding:15px;}
+.print button{ padding:3px;}
+.print ul{}
+.print ul li{padding:3px 0;}
+.print ul li span{display:inline-block; font-weight:700; padding-right:15px;}
+
+
+/*******************************************************************/
+input[type="text"], input[type="password"]{width:100%; border:1px solid #E0E0E0; color:#777; border-radius: 2px; padding: 3px 10px; margin:0px; box-shadow: 0px 1px 0px #FFF, 0px -2px 5px rgba(0, 0, 0, 0.067) inset; background: #FFF none repeat scroll 0% 0%;}
+input[type="text"]:focus, input[type="password"]:focus{box-shadow: 0px 0px 1px #FFF, -2px 0px 5px rgba(0, 0, 0, 0.2) inset;}
+textarea{width:100%; border: 1px solid #E0E0E0; color: #777; border-radius: 2px; padding: 3px 10px; margin:0px; box-shadow: 0px 1px 0px #FFF, 0px -2px 5px rgba(0, 0, 0, 0.067) inset; background: #FFF none repeat scroll 0% 0%;} 
+input[type="file"] {display: inline-block; border: 1px solid #DAE1E8; padding: 3px; margin:0px;}
+select{ padding:7px 10px; margin:0px;}
+input[type="submit"],input[type="reset"]{display:inline-block; padding:4px 30px; color:#fff; font-size:14px; border-radius:3px; border:1px solid #082943; background:transparent linear-gradient(to top, #015AA6 0%, #0486ED 100%); margin-left:4px;}
+input[type="submit"]:hover, input[type="reset"]:hover{background:transparent linear-gradient(to bottom, #015AA6 0%, #0486ED 100%);}
+/*******************************************************************/
