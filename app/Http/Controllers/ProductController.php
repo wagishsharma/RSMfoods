@@ -24,6 +24,7 @@ class ProductController extends Controller
 
         $this->products =Product::all();
     }
+
     public function index()
     {
         //
@@ -33,8 +34,8 @@ class ProductController extends Controller
             'products' => $this->products,
             //forUser($request->user()),
         ]);
-        
-    }
+       
+    } 
 
     /**
      * Show the form for creating a new resource.

@@ -45,5 +45,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('product/show/{id}','ProductController@show');
     Route::get('/home','ProductController@showQR');
     Route::auth();
+    Route::get('importExport', 'MaatwebsiteDemoController@importExport');
+    Route::get('downloadExcel/{type}', 'MaatwebsiteDemoController@downloadExcel');
+    Route::post('importExcel/', 'MaatwebsiteDemoController@importExcel');
 
 });
